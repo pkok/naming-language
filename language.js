@@ -20,7 +20,10 @@ function randrange( lo, hi = 0 ) {
 	return Math.floor( Math.random() * ( hi - lo ) ) + lo;
 }
 
-function capitalize( word ) {
+function capitalize( word = '' ) {
+	if ( word.length < 2 ) {
+		return word;
+	}
 	return word[ 0 ].toUpperCase() + word.slice( 1 );
 }
 
@@ -115,11 +118,10 @@ class Language {
 		}
 	}
 
-	getMorpheme( key ) {
+	getMorpheme( key = '' ) {
 		if ( this.nomorph ) {
 			return this.makeSyllable();
 		}
-		key = key || '';
 		const list = this.morphemes[ key ] || [];
 		let extras = 10;
 		if ( key ) {
@@ -148,9 +150,9 @@ class Language {
 	}
 
 	makeWord( key ) {
-		const nsylls = randrange( this.minsyll, this.maxsyll + 1 );
+		const nsylls = parseInt( randrange( randrange( this.minsyll, this.maxsyll + 1 ) ), 10 );
 		const keys = [];
-		keys[ randrange( nsylls ) ] = key;
+		keys[ nsylls ] = key;
 		let w = '';
 		for ( let i = 0; i < nsylls; i++ ) {
 			w += this.getMorpheme( keys[ i ] );
