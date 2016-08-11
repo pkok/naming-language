@@ -484,3 +484,4 @@ var ressets = [
     }
 ];
 
+export { makeRandomLanguage, makeName };
