@@ -214,6 +214,8 @@ class Language {
 			if ( Math.random() < 0.1 ) {
 				name = [ this.definite, name ].join( this.joiner );
 			}
+			// Trim leading/trailing spaces
+			name = name.replace( /^\s+/, '' ).replace( /[\s-]+$/, '' );
 
 			if ( ( name.length < this.minchar ) || ( name.length > this.maxchar ) ) {
 				continue;
