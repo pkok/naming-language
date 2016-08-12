@@ -215,7 +215,7 @@ class Language {
 				name = capitalize( [ this.definite, name ].join( this.joiner ) );
 			}
 			// Trim leading/trailing spaces
-			name = name.replace( /^\s+/, '' ).replace( /[\s-]+$/, '' );
+			name = name.replace( /^[\s-]+/, '' ).replace( /[\s-]+$/, '' );
 
 			if ( ( name.length < this.minchar ) || ( name.length > this.maxchar ) ) {
 				continue;
