@@ -60,6 +60,12 @@ export const corthsets = [
 			'ʧ': 'q',
 			'ʤ': 'j',
 		}
+	},
+	{
+		name: 'Japanese (romanji)',
+		orth: {
+			'ʃ': 'sh',
+		}
 	}
 ];
 
@@ -142,7 +148,11 @@ export const consets = [
 	{
 		name: 'English-lite',
 		C: 'ptkbdgmnszʒʧhjw'
-	}
+	},
+	{
+		name: 'Japanese-ish',
+		C: 'ksʃtnhmyrw'
+	},
 ];
 
 export const ssets = [
@@ -199,7 +209,11 @@ export const fsets = [
 	{
 		name: 's ʃ z ʒ',
 		F: 'sʃzʒ'
-	}
+	},
+	{
+		name: 'Just n',
+		F: 'n'
+	},
 ];
 
 export const vowsets = [
