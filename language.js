@@ -205,7 +205,7 @@ class Language {
 				if ( w1 == w2 ) {
 					continue;
 				}
-				if ( Math.random() > 0.5 ) {
+				if ( 'region' === key || Math.random() > 0.5 ) {
 					name = [ w1, w2 ].join( this.joiner );
 				} else {
 					name = [ w1, this.genitive, w2 ].join( this.joiner );
