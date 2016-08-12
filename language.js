@@ -1,4 +1,6 @@
 import shuffle from 'lodash/shuffle';
+import sortBy from 'lodash/sortby';
+import sortedUniq from 'lodash/sorteduniq';
 import {
 	defaultOrtho,
 	corthsets,
@@ -229,6 +231,18 @@ class Language {
 			this.names.push( name );
 			return name;
 		}
+	}
+
+	getAlphabet() {
+		const partsList = [];
+		for ( let i = 0; i < this.structure.length; i++ ) {
+			const part = this.structure[ i ];
+			if ( 'undefined' !== typeof this.phonemes[ part ] ) {
+				partsList.push( ...this.phonemes[ part ] );
+			}
+		}
+		const list = sortBy( partsList );
+		return this.spell( sortedUniq( list ).join( ' ' ) );
 	}
 }
 
