@@ -84,16 +84,16 @@ export const vorthsets = [
 			U: 'ü'
 		}
 	},
-	{
-		name: 'Welsh',
-		orth: {
-			A: 'â',
-			E: 'ê',
-			I: 'y',
-			O: 'ô',
-			U: 'w'
-		}
-	},
+	// {
+	// 	name: 'Welsh',
+	// 	orth: {
+	// 		A: 'â',
+	// 		E: 'ê',
+	// 		I: 'y',
+	// 		O: 'ô',
+	// 		U: 'w'
+	// 	}
+	// },
 	{
 		name: 'Diphthongs',
 		orth: {
