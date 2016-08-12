@@ -270,3 +270,5 @@ export const ressets = [
 		res: [ /[sʃf][sʃ]/, /(.)\1/, /[rl][rl]/ ]
 	}
 ];
+
+export const joinsets = '   -';

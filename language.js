@@ -11,7 +11,8 @@ import {
 	fsets,
 	vowsets,
 	syllstructs,
-	ressets
+	ressets,
+	joinsets
 } from './sources';
 
 function choose( list, exponent = 1 ) {
@@ -78,7 +79,7 @@ class Language {
 			this.minsyll++;
 		}
 		this.maxsyll = randrange( this.minsyll + 1, 7 );
-		this.joiner = choose( '   -' );
+		this.joiner = choose( joinsets );
 	}
 
 	spell( syll ) {
