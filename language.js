@@ -65,11 +65,11 @@ class Language {
 		this.noortho = false;
 		this.nomorph = false;
 		this.nowordpool = false;
-		this.phonemes.C = shuffle( choose( consets, 2 ).C );
-		this.phonemes.V = shuffle( choose( vowsets, 2 ).V );
-		this.phonemes.L = shuffle( choose( lsets, 2 ).L );
-		this.phonemes.S = shuffle( choose( ssets, 2 ).S );
-		this.phonemes.F = shuffle( choose( fsets, 2 ).F );
+		this.phonemes.C = shuffle( choose( consets, 1 ).C );
+		this.phonemes.V = shuffle( choose( vowsets, 1 ).V );
+		this.phonemes.L = shuffle( choose( lsets, 1 ).L );
+		this.phonemes.S = shuffle( choose( ssets, 1 ).S );
+		this.phonemes.F = shuffle( choose( fsets, 1 ).F );
 		this.structure = choose( syllstructs );
 		this.restricts = ressets[ 2 ].res;
 		this.cortho = choose( corthsets, 2 ).orth;
